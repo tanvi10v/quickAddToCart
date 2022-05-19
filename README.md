@@ -1,7 +1,9 @@
 # Quick Add To Carrt
 
 yarn install
+
 yarn run build
+
 yarn run serve
 
 http://localhost:8080
