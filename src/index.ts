@@ -6,16 +6,16 @@ import tesseract from "tesseract.js";
 
 // API that will return the last buy of the product per user and if not available, then it will be the bestseller in category
 const lastOrderPerUser = [
-  // {
-  //   title: "MasterChow Japanese Ramen Noodles",
-  //   img: "./img/noodles.jpg",
-  //   type: "Ramen noodles",
-  // },
-  // {
-  //   title: "Preserved Black Beans",
-  //   img: "./img/blackBeans.jpg",
-  //   type: "black beans",
-  // },
+  {
+    title: "MasterChow Japanese Ramen Noodles",
+    img: "./img/noodles.jpg",
+    type: "Ramen noodles",
+  },
+  {
+    title: "Preserved Black Beans",
+    img: "./img/blackBeans.jpg",
+    type: "black beans",
+  },
   // {
   //   title: "King Breakfast Cereals Strawberry Muesli",
   //   img: "./img/cereals.jpg",
