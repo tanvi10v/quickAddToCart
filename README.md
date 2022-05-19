@@ -1,4 +1,4 @@
-# Quick Add To Carrt
+# Quick Add To Cart
 
 yarn install
 
