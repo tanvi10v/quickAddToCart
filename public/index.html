@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Quick Add To Cart</title>
+
+  <style>
+    #cart-item-dummy {
+      display: none;
+    }
+
+    #product-catalog {
+      float: left;
+      width: 80%;
+    }
+
+    #cart {
+      float: left;
+    }
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: 10px;
+      text-align: center;
+      font-family: arial;
+      float: left;
+    }
+
+    .price {
+      color: grey;
+      font-size: 22px;
+    }
+
+    .card button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .card button:hover {
+      opacity: 0.7;
+    }
+
+    #labeled-image {
+      position: relative;
+    }
+
+    #original-image {
+      margin-right: 20px;
+    }
+
+    #file-recognition-images div {
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="recognition-image-input">Choose image</label>
+  <input type="file" accept="image/jpeg, image/png" id="recognition-image-input" /><br />
+  <label for="recognition-confidence-input">Confidence</label>
+  <input type="number" max="100" min="0" id="recognition-confidence-input" value="70" /><br />
+
+  <label for="recognition-progress">File recognition progress:</label>
+  <progress id="recognition-progress" max="100" value="0">0%</progress>
+
+  <div id="recognition-text"></div>
+
+  <div id="recognition-images">
+    <div id="original-image"></div>
+    <div id="labeled-image"></div>
+  </div>
+  </div>
+
+  <div id="product-catalog">
+    <h2 style="text-align:center">Product Card</h2>
+    <div class="card">
+      <img src="./img/noodles.jpg" alt="MasterChow Japanese Ramen Noodles" style="width:100%">
+      <h1>MasterChow Japanese Ramen Noodles</h1>
+      <p class="price">$29.99</p>
+      <p>MasterChow Japanese Ramen Noodles</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/blackBeans.jpg" alt="Preserved Black Beans " style="width:100%">
+      <h1>Preserved Black Beans </h1>
+      <p class="price">$19.99</p>
+      <p>Preserved Black Beans </p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/cereals.jpg" alt="King Breakfast Cereals Strawberry Muesli," style="width:100%">
+      <h1>King Breakfast Cereals Strawberry Muesli,</h1>
+      <p class="price">$29.99</p>
+      <p>King Breakfast Cereals Strawberry Muesli,</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/cornmeal.jpg" alt="Jioo Organics Standard Cornmeal" style="width:100%">
+      <h1>Jioo Organics Standard Cornmeal</h1>
+      <p class="price">$19.99</p>
+      <p>Jioo Organics Standard Cornmeal</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/crakers.jpg" alt="CROWN English crackers packet " style="width:100%">
+      <h1>CROWN English crackers packet </h1>
+      <p class="price">$19.99</p>
+      <p>CROWN English crackers packet </p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/oats.jpg" alt="Saffola Oats" style="width:100%">
+      <h1>Saffola Oats</h1>
+      <p class="price">$29.99</p>
+      <p>Saffola Oats</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/pasta.jpg" alt="Weikfield High Protein Penne Pasta" style="width:100%">
+      <h1>Weikfield High Protein Penne Pasta</h1>
+      <p class="price">$19.99</p>
+      <p>Weikfield High Protein Penne Pasta</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/pintoBeans.jpg" alt="Pinto GOYA Pack " style="width:100%">
+      <h1>Pinto GOYA Pack </h1>
+      <p class="price">$29.99</p>
+      <p>Pinto GOYA Pack </p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/popcorns.jpg" alt="ACT II Microwave Popcorn" style="width:100%">
+      <h1>ACT II Microwave Popcorn</h1>
+      <p class="price">$19.99</p>
+      <p>ACT II Microwave Popcorn</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/quinoa.jpg" alt="Green Habit Organic White Quinoa  " style="width:100%">
+      <h1>Green Habit Organic White Quinoa </h1>
+      <p class="price">$19.99</p>
+      <p>Green Habit Organic White Quinoa </p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/redBeans.jpg" alt="Shri Ram Agro Foods" style="width:100%">
+      <h1>Shri Ram Agro Foods </h1>
+      <p class="price">$29.99</p>
+      <p>Shri Ram Agro Foods</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/rice.jpg" alt="BB Royal Sona Masoori Raw Rice" style="width:100%">
+      <h1>BB Royal Sona Masoori Raw Rice</h1>
+      <p class="price">$19.99</p>
+      <p>BB Royal Sona Masoori Raw Rice</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="card">
+      <img src="./img/wheat.jpg" alt="Whole Wheat Atta (Sharbati) " style="width:100%">
+      <h1>GWhole Wheat Atta (Sharbati) </h1>
+      <p class="price">$19.99</p>
+      <p>Whole Wheat Atta (Sharbati) </p>
+      <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  <div id="cart">
+    <h2 style="text-align:center">Cart</h2>
+    <div class="cart-item card" id="cart-item-dummy">
+      <img id="cart-item-img" src=""
+        style="width:100%">
+      <select name="quantity" id="item-quantity">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+
+</html>
